@@ -17,7 +17,7 @@ public class InsertRoleImpl implements InsertRole {
     public String insertRole(String roleName, Date roleDate, String description) throws ParseException {
         String tip = "";
         //判断角色名是否重复
-        if (roleMapper.selectCountByName(roleName) != null){
+        if (roleMapper.selectCountByName(roleName) != 0){
             tip = "添加失败，角色名重复";
         }else {
             roleMapper.insertRole(roleName, roleDate, description);

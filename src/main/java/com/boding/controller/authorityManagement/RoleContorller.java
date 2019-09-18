@@ -57,7 +57,7 @@ public class RoleContorller {
     }
     @ResponseBody//给角色授权
     @RequestMapping(value = "/insertRoleRight",method = {RequestMethod.POST,RequestMethod.GET})
-    public String insertRoleRight(@RequestParam int roleId,@RequestParam(value = "rId[]") int[] rId,@RequestParam int rType){
+    public String insertRoleRight(@RequestParam int roleId,@RequestParam(value = "rId") Integer[] rId,@RequestParam int rType){
         String tip = "";
         for ( int id:rId
              ) {
