@@ -86,7 +86,7 @@ public class UserController {
         if (user1 != null) {
             httpSession.setAttribute("user",user1);
            /* User user2 = (User) httpSession.getAttribute("user");
-            System.out.println(user2.getUserName() + user2.getUserPsd());  //取出登录信息*/
+            System.out.println(user2.getUserName() + user2.getUserPsd()); */ //取出登录信息
             tip = "登陆成功";
             return tip;
         }else {
@@ -95,7 +95,7 @@ public class UserController {
         }
     }
     @ResponseBody//退出登录
-    @RequestMapping("/out")
+    @RequestMapping(value = "/out",method = {RequestMethod.GET,RequestMethod.POST})
     public String out(HttpServletRequest request){
         Enumeration em = request.getSession().getAttributeNames();
         while(em.hasMoreElements())//遍历执行remove操作
