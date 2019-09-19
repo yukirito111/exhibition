@@ -1,26 +1,26 @@
 package com.boding.controller.authorityManagement;
 
-import com.boding.pojo.authorityManagement.User;
-import com.boding.pojo.authorityManagement.Userrolerelation;
-import com.boding.service.authorityManagement.role.SelectRoleByName;
-import com.boding.service.authorityManagement.user.*;
-import com.boding.service.authorityManagement.userRole.DeleteUserRole;
-import com.boding.service.authorityManagement.userRole.InsertUserRole;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
+        import com.boding.pojo.authorityManagement.User;
+        import com.boding.pojo.authorityManagement.Userrolerelation;
+        import com.boding.service.authorityManagement.role.SelectRoleByName;
+        import com.boding.service.authorityManagement.user.*;
+        import com.boding.service.authorityManagement.userRole.DeleteUserRole;
+        import com.boding.service.authorityManagement.userRole.InsertUserRole;
+        import org.springframework.beans.factory.annotation.Autowired;
+        import org.springframework.stereotype.Controller;
+        import org.springframework.web.bind.annotation.*;
+        import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-import java.io.UnsupportedEncodingException;
-import java.security.NoSuchAlgorithmException;
-import java.text.ParseException;
-import java.util.Date;
-import java.util.Enumeration;
-import java.util.List;
+        import javax.servlet.http.HttpServletRequest;
+        import javax.servlet.http.HttpSession;
+        import java.io.UnsupportedEncodingException;
+        import java.security.NoSuchAlgorithmException;
+        import java.text.ParseException;
+        import java.util.Date;
+        import java.util.Enumeration;
+        import java.util.List;
 
-import static com.boding.util.SystemDate.systemDate;
+        import static com.boding.util.SystemDate.systemDate;
 
 @Controller
 @RequestMapping(value = "/user",method = {RequestMethod.POST,RequestMethod.GET})
